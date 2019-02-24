@@ -309,3 +309,5 @@ OpenCover/
 
 # Database
 *.db
+/Combiner.Domain/NonDomain/GetCreatureAttribs.py
+/Combiner/Database/Creatures.db.old
