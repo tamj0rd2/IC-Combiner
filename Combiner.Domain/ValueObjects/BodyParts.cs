@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
 
     using Combiner.Domain.Resources;
     using Combiner.Domain.ValueObjects.Parts;
@@ -24,29 +23,29 @@
                 this.FrontLegs = new FrontLegs(stockAttributes);
             }
 
-            if (stockAttributes["speed_max-back"] > 0)
+            if (stockAttributes[LuaResources.SpeedMaxBack] > 0)
             {
                 this.BackLegs = new BackLegs();
             }
 
-            if (stockAttributes["airspeed_max-wings"] > 0)
+            if (stockAttributes[LuaResources.AirspeedMaxWings] > 0)
             {
-                this.Wings = new Wings();
+                this.Wings = new Wings(stockAttributes);
             }
 
-            if (stockAttributes.ContainsKey("exp_melee8_damage") || stockAttributes.ContainsKey("exp_range8_damage"))
+            var hasClawMelee = stockAttributes.ContainsKey(LuaResources.ExpMelee8Damage);
+            var hasClawRange = stockAttributes.ContainsKey(LuaResources.ExpRange8Damage);
+
+            if (hasClawMelee || hasClawRange)
             {
-                this.Claws = new Claws();
+                this.Claws = new Claws(stockAttributes);
             }
         }
 
-        [Required]
         public Head Head { get; }
 
-        [Required]
         public Torso Torso { get; }
 
-        [Required]
         public Tail Tail { get; }
 
         public FrontLegs FrontLegs { get; }

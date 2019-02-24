@@ -61,6 +61,15 @@ namespace Combiner.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to airspeed_max-wings.
+        /// </summary>
+        internal static string AirspeedMaxWings {
+            get {
+                return ResourceManager.GetString("AirspeedMaxWings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to armour-front.
         /// </summary>
         internal static string ArmourFront {
@@ -79,6 +88,24 @@ namespace Combiner.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to exp_melee8_damage.
+        /// </summary>
+        internal static string ExpMelee8Damage {
+            get {
+                return ResourceManager.GetString("ExpMelee8Damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to exp_range8_damage.
+        /// </summary>
+        internal static string ExpRange8Damage {
+            get {
+                return ResourceManager.GetString("ExpRange8Damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hitpoints-front.
         /// </summary>
         internal static string HitpointsFront {
@@ -93,6 +120,24 @@ namespace Combiner.Domain.Resources {
         internal static string Melee2DamageType {
             get {
                 return ResourceManager.GetString("Melee2DamageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to melee8_dmgtype.
+        /// </summary>
+        internal static string Melee8DamageType {
+            get {
+                return ResourceManager.GetString("Melee8DamageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to poison_pincers.
+        /// </summary>
+        internal static string PoisonPincers {
+            get {
+                return ResourceManager.GetString("PoisonPincers", resourceCulture);
             }
         }
         
@@ -133,11 +178,56 @@ namespace Combiner.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to range8_damage.
+        /// </summary>
+        internal static string Range8Damage {
+            get {
+                return ResourceManager.GetString("Range8Damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to range8_dmgtype.
+        /// </summary>
+        internal static string Range8DamageType {
+            get {
+                return ResourceManager.GetString("Range8DamageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to range8_max.
+        /// </summary>
+        internal static string Range8Max {
+            get {
+                return ResourceManager.GetString("Range8Max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to range8_special.
+        /// </summary>
+        internal static string Range8Special {
+            get {
+                return ResourceManager.GetString("Range8Special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to size.
         /// </summary>
         internal static string Size {
             get {
                 return ResourceManager.GetString("Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to speed_max-back.
+        /// </summary>
+        internal static string SpeedMaxBack {
+            get {
+                return ResourceManager.GetString("SpeedMaxBack", resourceCulture);
             }
         }
         

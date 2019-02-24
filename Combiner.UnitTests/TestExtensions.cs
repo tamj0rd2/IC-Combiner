@@ -1,10 +1,12 @@
-﻿ namespace Combiner.UnitTests
+﻿namespace Combiner.UnitTests
 {
+    using FluentAssertions;
+
     public static class TestExtensions
     {
-        public static bool IsNull(this object obj)
+        public static bool IsNotNull(this object obj)
         {
-            return obj == null;
+            return obj != null;
         }
     }
 }

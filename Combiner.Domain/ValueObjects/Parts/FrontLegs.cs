@@ -14,7 +14,7 @@
             this.HitPoints = attributes[LuaResources.HitpointsFront];
             this.Armour = attributes[LuaResources.ArmourFront];
             this.LandSpeed = attributes[LuaResources.SpeedMaxFront];
-            this.HasDigging = attributes[LuaResources.CanDig] == 1;
+            this.HasDigging = (int)attributes[LuaResources.CanDig] == 1;
 
             if (attributes.ContainsKey(LuaResources.Melee2DamageType))
             {
@@ -28,17 +28,14 @@
                     (RangeAttack.RangeDamageType)attributes[LuaResources.Range2DamageType],
                     attributes[LuaResources.Range2Damage],
                     attributes[LuaResources.Range2Max],
-                    (RangeAttack.RangeSpecial)attributes["range2_special"]);
+                    (RangeAttack.RangeSpecial)attributes[LuaResources.Range2Special]);
             }
         }
 
-        [Required, Range(double.Epsilon, 5000.0)]
         public double HitPoints { get; }
 
-        [Required, Range(double.Epsilon, 5000.0)]
         public double Armour { get; }
 
-        [Required, Range(0.0, 5000.0)]
         public double LandSpeed { get; }
 
         [Required]
