@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PartsTests\BackLegstests.cs" />
+    <Compile Include="PartsTests\BackLegsTests.cs" />
     <Compile Include="PartsTests\ClawsTests.cs" />
     <Compile Include="PartsTests\HeadTests.cs" />
     <Compile Include="PartsTests\TailTests.cs" />

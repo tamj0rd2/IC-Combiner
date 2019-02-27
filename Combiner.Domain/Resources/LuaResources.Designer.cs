@@ -106,11 +106,38 @@ namespace Combiner.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to herding.
+        /// </summary>
+        internal static string Herding {
+            get {
+                return ResourceManager.GetString("Herding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hitpoints-front.
         /// </summary>
         internal static string HitpointsFront {
             get {
                 return ResourceManager.GetString("HitpointsFront", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to is_immune.
+        /// </summary>
+        internal static string IsImmune {
+            get {
+                return ResourceManager.GetString("IsImmune", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to loner.
+        /// </summary>
+        internal static string Loner {
+            get {
+                return ResourceManager.GetString("Loner", resourceCulture);
             }
         }
         
@@ -129,6 +156,24 @@ namespace Combiner.Domain.Resources {
         internal static string Melee8DamageType {
             get {
                 return ResourceManager.GetString("Melee8DamageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to overpopulation.
+        /// </summary>
+        internal static string Overpopulation {
+            get {
+                return ResourceManager.GetString("Overpopulation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pack_hunter.
+        /// </summary>
+        internal static string PackHunter {
+            get {
+                return ResourceManager.GetString("PackHunter", resourceCulture);
             }
         }
         
@@ -210,6 +255,15 @@ namespace Combiner.Domain.Resources {
         internal static string Range8Special {
             get {
                 return ResourceManager.GetString("Range8Special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to regeneration.
+        /// </summary>
+        internal static string Regeneration {
+            get {
+                return ResourceManager.GetString("Regeneration", resourceCulture);
             }
         }
         

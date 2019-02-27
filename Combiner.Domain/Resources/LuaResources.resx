@@ -132,14 +132,29 @@
   <data name="ExpRange8Damage" xml:space="preserve">
     <value>exp_range8_damage</value>
   </data>
+  <data name="Herding" xml:space="preserve">
+    <value>herding</value>
+  </data>
   <data name="HitpointsFront" xml:space="preserve">
     <value>hitpoints-front</value>
+  </data>
+  <data name="IsImmune" xml:space="preserve">
+    <value>is_immune</value>
+  </data>
+  <data name="Loner" xml:space="preserve">
+    <value>loner</value>
   </data>
   <data name="Melee2DamageType" xml:space="preserve">
     <value>melee2_dmgtype</value>
   </data>
   <data name="Melee8DamageType" xml:space="preserve">
     <value>melee8_dmgtype</value>
+  </data>
+  <data name="Overpopulation" xml:space="preserve">
+    <value>overpopulation</value>
+  </data>
+  <data name="PackHunter" xml:space="preserve">
+    <value>pack_hunter</value>
   </data>
   <data name="PoisonPincers" xml:space="preserve">
     <value>poison_pincers</value>
@@ -167,6 +182,9 @@
   </data>
   <data name="Range8Special" xml:space="preserve">
     <value>range8_special</value>
+  </data>
+  <data name="Regeneration" xml:space="preserve">
+    <value>regeneration</value>
   </data>
   <data name="Size" xml:space="preserve">
     <value>size</value>

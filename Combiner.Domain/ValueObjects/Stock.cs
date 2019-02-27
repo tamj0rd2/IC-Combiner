@@ -22,7 +22,7 @@
             }
 
             this.BodyParts = new BodyParts(stockAttributes);
-            this.InherentAbilities = new InherentAbilities(false, false, false, false, false, false);
+            this.InherentAbilities = new InherentAbilities(stockAttributes);
         }
 
         public string Name { get; }

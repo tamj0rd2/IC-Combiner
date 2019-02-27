@@ -68,8 +68,15 @@
             bodyParts.Claws.IsNotNull().Should().Be(hasClaws);
         }
 
-        [TestCase("somethingthatdoesntexist")]
-        public void HasCorrectInherentAbilities(string scriptName)
+        [TestCase("albatross", true, false, false, false, false, false)]
+        [TestCase("ant", false, true, false, false, false, false)]
+        [TestCase("baboon", false, false, false, false, true, false)]
+        [TestCase("crocodile", false, true, false, false, false, false)]
+        [TestCase("elephant", true, false, false, false, false, false)]
+        [TestCase("lemming", false, false, false, true, false, false)]
+        [TestCase("squid", false, false, false, false, false, true)]
+        public void HasCorrectInherentAbilities(
+            string scriptName, bool herding, bool immunity, bool loner, bool overPop, bool pack, bool regen)
         {
             // Arrange
             var attributes = TestHelpers.GetStockAttributes(scriptName);
@@ -79,6 +86,12 @@
 
             // Assert
             stock.InherentAbilities.Should().NotBeNull();
+            stock.InherentAbilities.HasHerding.Should().Be(herding);
+            stock.InherentAbilities.HasImmunity.Should().Be(immunity);
+            stock.InherentAbilities.HasLoner.Should().Be(loner);
+            stock.InherentAbilities.HasOverpopulation.Should().Be(overPop);
+            stock.InherentAbilities.HasPackHunter.Should().Be(pack);
+            stock.InherentAbilities.HasRegeneration.Should().Be(regen);
         }
     }
 }

@@ -1,21 +1,42 @@
 ﻿namespace Combiner.Domain.ValueObjects
 {
+    using System.Collections.Generic;
+
+    using Combiner.Domain.Resources;
+
     public class InherentAbilities : ValueObject<InherentAbilities>
     {
-        public InherentAbilities(
-            bool hasHerding,
-            bool hasImmunity,
-            bool hasLoner,
-            bool hasOverpopulation,
-            bool hasPackHunter,
-            bool hasRegeneration)
+        public InherentAbilities(IReadOnlyDictionary<string, double> attributes)
         {
-            this.HasHerding = hasHerding;
-            this.HasImmunity = hasImmunity;
-            this.HasLoner = hasLoner;
-            this.HasOverpopulation = hasOverpopulation;
-            this.HasPackHunter = hasPackHunter;
-            this.HasRegeneration = hasRegeneration;
+            if (attributes.ContainsKey(LuaResources.Herding))
+            {
+                this.HasHerding = (int)attributes[LuaResources.Herding] == 1;
+            }
+
+            if (attributes.ContainsKey(LuaResources.IsImmune))
+            {
+                this.HasImmunity = (int)attributes[LuaResources.IsImmune] == 1;
+            }
+
+            if (attributes.ContainsKey(LuaResources.Loner))
+            {
+                this.HasLoner = (int)attributes[LuaResources.Loner] == 1;
+            }
+
+            if (attributes.ContainsKey(LuaResources.Overpopulation))
+            {
+                this.HasOverpopulation = (int)attributes[LuaResources.Overpopulation] == 1;
+            }
+
+            if (attributes.ContainsKey(LuaResources.PackHunter))
+            {
+                this.HasPackHunter = (int)attributes[LuaResources.PackHunter] == 1;
+            }
+
+            if (attributes.ContainsKey(LuaResources.Regeneration))
+            {
+                this.HasRegeneration = (int)attributes[LuaResources.Regeneration] == 1;
+            }
         }
 
         public bool HasHerding { get; }
@@ -32,7 +53,12 @@
 
         protected override bool EqualsCore(InherentAbilities other)
         {
-            throw new System.NotImplementedException();
+            return this.HasHerding == other.HasHerding &&
+                   this.HasImmunity == other.HasImmunity &&
+                   this.HasLoner == other.HasLoner &&
+                   this.HasOverpopulation == other.HasOverpopulation &&
+                   this.HasPackHunter == other.HasPackHunter &&
+                   this.HasRegeneration == other.HasRegeneration;
         }
 
         protected override int GetHashCodeCore()
