@@ -64,11 +64,7 @@
     <Compile Include="ValueObjects\ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NonDomain\LimbAttributes.xlsx" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NonDomain\GetCreatureAttribs.py" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
