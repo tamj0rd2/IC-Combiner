@@ -9,7 +9,7 @@
     {
         public Wings(IReadOnlyDictionary<string, double> attributes)
         {
-            this.AirSpeed = (int)attributes[LuaResources.AirspeedMaxWings];
+            this.AirSpeed = (int)attributes[LuaResources.SpeedMax_Airspeed_Wings];
             if (this.AirSpeed < 1)
             {
                 throw new ArgumentOutOfRangeException("Expected wings to have airspeed");

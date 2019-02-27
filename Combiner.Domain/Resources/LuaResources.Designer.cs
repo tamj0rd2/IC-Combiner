@@ -22,7 +22,7 @@ namespace Combiner.Domain.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LuaResources {
+    public partial class LuaResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Combiner.Domain.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Combiner.Domain.Resources.LuaResources", typeof(LuaResources).Assembly);
@@ -51,7 +51,7 @@ namespace Combiner.Domain.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,236 +61,128 @@ namespace Combiner.Domain.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to airspeed_max-wings.
-        /// </summary>
-        internal static string AirspeedMaxWings {
-            get {
-                return ResourceManager.GetString("AirspeedMaxWings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to armour-front.
-        /// </summary>
-        internal static string ArmourFront {
-            get {
-                return ResourceManager.GetString("ArmourFront", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to can_dig.
         /// </summary>
-        internal static string CanDig {
+        public static string Ability_CanDig {
             get {
-                return ResourceManager.GetString("CanDig", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to exp_melee8_damage.
-        /// </summary>
-        internal static string ExpMelee8Damage {
-            get {
-                return ResourceManager.GetString("ExpMelee8Damage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to exp_range8_damage.
-        /// </summary>
-        internal static string ExpRange8Damage {
-            get {
-                return ResourceManager.GetString("ExpRange8Damage", resourceCulture);
+                return ResourceManager.GetString("Ability_CanDig", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to herding.
         /// </summary>
-        internal static string Herding {
+        public static string Ability_Herding {
             get {
-                return ResourceManager.GetString("Herding", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to hitpoints-front.
-        /// </summary>
-        internal static string HitpointsFront {
-            get {
-                return ResourceManager.GetString("HitpointsFront", resourceCulture);
+                return ResourceManager.GetString("Ability_Herding", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to is_immune.
         /// </summary>
-        internal static string IsImmune {
+        public static string Ability_IsImmune {
             get {
-                return ResourceManager.GetString("IsImmune", resourceCulture);
+                return ResourceManager.GetString("Ability_IsImmune", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to loner.
         /// </summary>
-        internal static string Loner {
+        public static string Ability_Loner {
             get {
-                return ResourceManager.GetString("Loner", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to melee2_dmgtype.
-        /// </summary>
-        internal static string Melee2DamageType {
-            get {
-                return ResourceManager.GetString("Melee2DamageType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to melee8_dmgtype.
-        /// </summary>
-        internal static string Melee8DamageType {
-            get {
-                return ResourceManager.GetString("Melee8DamageType", resourceCulture);
+                return ResourceManager.GetString("Ability_Loner", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to overpopulation.
         /// </summary>
-        internal static string Overpopulation {
+        public static string Ability_Overpopulation {
             get {
-                return ResourceManager.GetString("Overpopulation", resourceCulture);
+                return ResourceManager.GetString("Ability_Overpopulation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to pack_hunter.
         /// </summary>
-        internal static string PackHunter {
+        public static string Ability_PackHunter {
             get {
-                return ResourceManager.GetString("PackHunter", resourceCulture);
+                return ResourceManager.GetString("Ability_PackHunter", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to poison_pincers.
         /// </summary>
-        internal static string PoisonPincers {
+        public static string Ability_PoisonPincers {
             get {
-                return ResourceManager.GetString("PoisonPincers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range2_damage.
-        /// </summary>
-        internal static string Range2Damage {
-            get {
-                return ResourceManager.GetString("Range2Damage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range2_dmgtype.
-        /// </summary>
-        internal static string Range2DamageType {
-            get {
-                return ResourceManager.GetString("Range2DamageType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range2_max.
-        /// </summary>
-        internal static string Range2Max {
-            get {
-                return ResourceManager.GetString("Range2Max", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range2_special.
-        /// </summary>
-        internal static string Range2Special {
-            get {
-                return ResourceManager.GetString("Range2Special", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range8_damage.
-        /// </summary>
-        internal static string Range8Damage {
-            get {
-                return ResourceManager.GetString("Range8Damage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range8_dmgtype.
-        /// </summary>
-        internal static string Range8DamageType {
-            get {
-                return ResourceManager.GetString("Range8DamageType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range8_max.
-        /// </summary>
-        internal static string Range8Max {
-            get {
-                return ResourceManager.GetString("Range8Max", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to range8_special.
-        /// </summary>
-        internal static string Range8Special {
-            get {
-                return ResourceManager.GetString("Range8Special", resourceCulture);
+                return ResourceManager.GetString("Ability_PoisonPincers", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to regeneration.
         /// </summary>
-        internal static string Regeneration {
+        public static string Ability_Regeneration {
             get {
-                return ResourceManager.GetString("Regeneration", resourceCulture);
+                return ResourceManager.GetString("Ability_Regeneration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to armour-front.
+        /// </summary>
+        public static string Armour_Front {
+            get {
+                return ResourceManager.GetString("Armour_Front", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to hitpoints-front.
+        /// </summary>
+        public static string Hitpoints_Front {
+            get {
+                return ResourceManager.GetString("Hitpoints_Front", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to size.
         /// </summary>
-        internal static string Size {
+        public static string Size {
             get {
                 return ResourceManager.GetString("Size", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to airspeed_max-wings.
+        /// </summary>
+        public static string SpeedMax_Airspeed_Wings {
+            get {
+                return ResourceManager.GetString("SpeedMax_Airspeed_Wings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to speed_max-back.
         /// </summary>
-        internal static string SpeedMaxBack {
+        public static string SpeedMax_LandSpeed_Back {
             get {
-                return ResourceManager.GetString("SpeedMaxBack", resourceCulture);
+                return ResourceManager.GetString("SpeedMax_LandSpeed_Back", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to speed_max-front.
         /// </summary>
-        internal static string SpeedMaxFront {
+        public static string SpeedMax_LandSpeed_Front {
             get {
-                return ResourceManager.GetString("SpeedMaxFront", resourceCulture);
+                return ResourceManager.GetString("SpeedMax_LandSpeed_Front", resourceCulture);
             }
         }
     }

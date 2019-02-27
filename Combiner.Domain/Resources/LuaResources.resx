@@ -117,82 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AirspeedMaxWings" xml:space="preserve">
+  <data name="SpeedMax_Airspeed_Wings" xml:space="preserve">
     <value>airspeed_max-wings</value>
   </data>
-  <data name="ArmourFront" xml:space="preserve">
+  <data name="Armour_Front" xml:space="preserve">
     <value>armour-front</value>
   </data>
-  <data name="CanDig" xml:space="preserve">
+  <data name="Ability_CanDig" xml:space="preserve">
     <value>can_dig</value>
   </data>
-  <data name="ExpMelee8Damage" xml:space="preserve">
-    <value>exp_melee8_damage</value>
-  </data>
-  <data name="ExpRange8Damage" xml:space="preserve">
-    <value>exp_range8_damage</value>
-  </data>
-  <data name="Herding" xml:space="preserve">
+  <data name="Ability_Herding" xml:space="preserve">
     <value>herding</value>
   </data>
-  <data name="HitpointsFront" xml:space="preserve">
+  <data name="Hitpoints_Front" xml:space="preserve">
     <value>hitpoints-front</value>
   </data>
-  <data name="IsImmune" xml:space="preserve">
+  <data name="Ability_IsImmune" xml:space="preserve">
     <value>is_immune</value>
   </data>
-  <data name="Loner" xml:space="preserve">
+  <data name="Ability_Loner" xml:space="preserve">
     <value>loner</value>
   </data>
-  <data name="Melee2DamageType" xml:space="preserve">
-    <value>melee2_dmgtype</value>
-  </data>
-  <data name="Melee8DamageType" xml:space="preserve">
-    <value>melee8_dmgtype</value>
-  </data>
-  <data name="Overpopulation" xml:space="preserve">
+  <data name="Ability_Overpopulation" xml:space="preserve">
     <value>overpopulation</value>
   </data>
-  <data name="PackHunter" xml:space="preserve">
+  <data name="Ability_PackHunter" xml:space="preserve">
     <value>pack_hunter</value>
   </data>
-  <data name="PoisonPincers" xml:space="preserve">
+  <data name="Ability_PoisonPincers" xml:space="preserve">
     <value>poison_pincers</value>
   </data>
-  <data name="Range2Damage" xml:space="preserve">
-    <value>range2_damage</value>
-  </data>
-  <data name="Range2DamageType" xml:space="preserve">
-    <value>range2_dmgtype</value>
-  </data>
-  <data name="Range2Max" xml:space="preserve">
-    <value>range2_max</value>
-  </data>
-  <data name="Range2Special" xml:space="preserve">
-    <value>range2_special</value>
-  </data>
-  <data name="Range8Damage" xml:space="preserve">
-    <value>range8_damage</value>
-  </data>
-  <data name="Range8DamageType" xml:space="preserve">
-    <value>range8_dmgtype</value>
-  </data>
-  <data name="Range8Max" xml:space="preserve">
-    <value>range8_max</value>
-  </data>
-  <data name="Range8Special" xml:space="preserve">
-    <value>range8_special</value>
-  </data>
-  <data name="Regeneration" xml:space="preserve">
+  <data name="Ability_Regeneration" xml:space="preserve">
     <value>regeneration</value>
   </data>
   <data name="Size" xml:space="preserve">
     <value>size</value>
   </data>
-  <data name="SpeedMaxBack" xml:space="preserve">
+  <data name="SpeedMax_LandSpeed_Back" xml:space="preserve">
     <value>speed_max-back</value>
   </data>
-  <data name="SpeedMaxFront" xml:space="preserve">
+  <data name="SpeedMax_LandSpeed_Front" xml:space="preserve">
     <value>speed_max-front</value>
   </data>
 </root>

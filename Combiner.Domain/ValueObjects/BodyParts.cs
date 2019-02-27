@@ -8,33 +8,45 @@
 
     public sealed class BodyParts : ValueObject<BodyParts>
     {
+        public enum Parts
+        {
+            Unknown = -1,
+            Front = 2,
+            Back = 3,
+            Head = 4,
+            Tail = 5,
+            Torso = 6,
+            Wings = 7,
+            Claws = 8
+        }
+
         public BodyParts(IReadOnlyDictionary<string, double> stockAttributes)
         {
             this.Head = new Head();
             this.Torso = new Torso();
             this.Tail = new Tail();
 
-            var hasFrontArmour = stockAttributes[LuaResources.ArmourFront] > 0;
-            var hasFrontHitpoints = stockAttributes[LuaResources.HitpointsFront] > 0;
-            var hasFrontSpeed = stockAttributes[LuaResources.SpeedMaxFront] > 0;
+            var hasFrontArmour = stockAttributes[LuaResources.Armour_Front] > 0;
+            var hasFrontHitpoints = stockAttributes[LuaResources.Hitpoints_Front] > 0;
+            var hasFrontSpeed = stockAttributes[LuaResources.SpeedMax_LandSpeed_Front] > 0;
 
             if (hasFrontArmour || hasFrontHitpoints || hasFrontSpeed)
             {
                 this.FrontLegs = new FrontLegs(stockAttributes);
             }
 
-            if (stockAttributes[LuaResources.SpeedMaxBack] > 0)
+            if (stockAttributes[LuaResources.SpeedMax_LandSpeed_Back] > 0)
             {
                 this.BackLegs = new BackLegs();
             }
 
-            if (stockAttributes[LuaResources.AirspeedMaxWings] > 0)
+            if (stockAttributes[LuaResources.SpeedMax_Airspeed_Wings] > 0)
             {
                 this.Wings = new Wings(stockAttributes);
             }
 
-            var hasClawMelee = stockAttributes.ContainsKey(LuaResources.ExpMelee8Damage);
-            var hasClawRange = stockAttributes.ContainsKey(LuaResources.ExpRange8Damage);
+            var hasClawMelee = stockAttributes.ContainsKey(LuaResources.MeleeDamageScaling(Parts.Claws));
+            var hasClawRange = stockAttributes.ContainsKey(LuaResources.RangeDamageScaling(Parts.Claws));
 
             if (hasClawMelee || hasClawRange)
             {

@@ -9,24 +9,27 @@
     {
         public Claws(IReadOnlyDictionary<string, double> attributes)
         {
-            if (attributes.ContainsKey(LuaResources.Melee8DamageType))
+            var bodyPart = BodyParts.Parts.Claws;
+
+            var damageTypeKey = LuaResources.MeleeDamageType(bodyPart);
+            if (attributes.ContainsKey(damageTypeKey))
             {
-                var damageType = (MeleeAttack.MeleeDamageType)attributes[LuaResources.Melee8DamageType];
-                this.MeleeAttack = new MeleeAttack(damageType);
+                this.MeleeAttack = new MeleeAttack((MeleeAttack.MeleeDamageType)attributes[damageTypeKey]);
             }
 
-            if (attributes.ContainsKey(LuaResources.Range8DamageType))
+            var rangeDamageTypeKey = LuaResources.RangeDamageType(bodyPart);
+            if (attributes.ContainsKey(rangeDamageTypeKey))
             {
                 this.RangeAttack = new RangeAttack(
-                    (RangeAttack.RangeDamageType)attributes[LuaResources.Range8DamageType],
-                    attributes[LuaResources.Range8Damage],
-                    attributes[LuaResources.Range8Max],
-                    (RangeAttack.RangeSpecial)attributes[LuaResources.Range8Special]);
+                    (RangeAttack.RangeDamageType)attributes[rangeDamageTypeKey],
+                    attributes[LuaResources.RangeDamage(bodyPart)],
+                    attributes[LuaResources.RangeMax(bodyPart)],
+                    (RangeAttack.RangeSpecial)attributes[LuaResources.RangeSpecial(bodyPart)]);
             }
 
-            if (attributes.ContainsKey(LuaResources.PoisonPincers))
+            if (attributes.ContainsKey(LuaResources.Ability_PoisonPincers))
             {
-                this.HasPoisonPincers = (int)attributes[LuaResources.PoisonPincers] == 1;
+                this.HasPoisonPincers = (int)attributes[LuaResources.Ability_PoisonPincers] == 1;
             }
         }
 

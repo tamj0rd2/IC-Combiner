@@ -8,34 +8,34 @@
     {
         public InherentAbilities(IReadOnlyDictionary<string, double> attributes)
         {
-            if (attributes.ContainsKey(LuaResources.Herding))
+            if (attributes.ContainsKey(LuaResources.Ability_Herding))
             {
-                this.HasHerding = (int)attributes[LuaResources.Herding] == 1;
+                this.HasHerding = (int)attributes[LuaResources.Ability_Herding] == 1;
             }
 
-            if (attributes.ContainsKey(LuaResources.IsImmune))
+            if (attributes.ContainsKey(LuaResources.Ability_IsImmune))
             {
-                this.HasImmunity = (int)attributes[LuaResources.IsImmune] == 1;
+                this.HasImmunity = (int)attributes[LuaResources.Ability_IsImmune] == 1;
             }
 
-            if (attributes.ContainsKey(LuaResources.Loner))
+            if (attributes.ContainsKey(LuaResources.Ability_Loner))
             {
-                this.HasLoner = (int)attributes[LuaResources.Loner] == 1;
+                this.HasLoner = (int)attributes[LuaResources.Ability_Loner] == 1;
             }
 
-            if (attributes.ContainsKey(LuaResources.Overpopulation))
+            if (attributes.ContainsKey(LuaResources.Ability_Overpopulation))
             {
-                this.HasOverpopulation = (int)attributes[LuaResources.Overpopulation] == 1;
+                this.HasOverpopulation = (int)attributes[LuaResources.Ability_Overpopulation] == 1;
             }
 
-            if (attributes.ContainsKey(LuaResources.PackHunter))
+            if (attributes.ContainsKey(LuaResources.Ability_PackHunter))
             {
-                this.HasPackHunter = (int)attributes[LuaResources.PackHunter] == 1;
+                this.HasPackHunter = (int)attributes[LuaResources.Ability_PackHunter] == 1;
             }
 
-            if (attributes.ContainsKey(LuaResources.Regeneration))
+            if (attributes.ContainsKey(LuaResources.Ability_Regeneration))
             {
-                this.HasRegeneration = (int)attributes[LuaResources.Regeneration] == 1;
+                this.HasRegeneration = (int)attributes[LuaResources.Ability_Regeneration] == 1;
             }
         }
 

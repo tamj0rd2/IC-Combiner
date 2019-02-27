@@ -11,24 +11,27 @@
     {
         public FrontLegs(IReadOnlyDictionary<string, double> attributes)
         {
-            this.HitPoints = attributes[LuaResources.HitpointsFront];
-            this.Armour = attributes[LuaResources.ArmourFront];
-            this.LandSpeed = attributes[LuaResources.SpeedMaxFront];
-            this.HasDigging = (int)attributes[LuaResources.CanDig] == 1;
+            var bodyPart = BodyParts.Parts.Front;
 
-            if (attributes.ContainsKey(LuaResources.Melee2DamageType))
+            this.HitPoints = attributes[LuaResources.Hitpoints_Front];
+            this.Armour = attributes[LuaResources.Armour_Front];
+            this.LandSpeed = attributes[LuaResources.SpeedMax_LandSpeed_Front];
+            this.HasDigging = (int)attributes[LuaResources.Ability_CanDig] == 1;
+
+            var meleeDamageTypeKey = LuaResources.MeleeDamageType(bodyPart);
+            if (attributes.ContainsKey(meleeDamageTypeKey))
             {
-                var meleeDamageType = attributes[LuaResources.Melee2DamageType];
-                this.MeleeAttack = new MeleeAttack((MeleeAttack.MeleeDamageType)meleeDamageType);
+                this.MeleeAttack = new MeleeAttack((MeleeAttack.MeleeDamageType)attributes[meleeDamageTypeKey]);
             }
 
-            if (attributes.ContainsKey(LuaResources.Range2DamageType))
+            var rangeDamageTypeKey = LuaResources.RangeDamageType(bodyPart);
+            if (attributes.ContainsKey(rangeDamageTypeKey))
             {
                 this.RangeAttack = new RangeAttack(
-                    (RangeAttack.RangeDamageType)attributes[LuaResources.Range2DamageType],
-                    attributes[LuaResources.Range2Damage],
-                    attributes[LuaResources.Range2Max],
-                    (RangeAttack.RangeSpecial)attributes[LuaResources.Range2Special]);
+                    (RangeAttack.RangeDamageType)attributes[rangeDamageTypeKey],
+                    attributes[LuaResources.RangeDamage(bodyPart)],
+                    attributes[LuaResources.RangeMax(bodyPart)],
+                    (RangeAttack.RangeSpecial)attributes[LuaResources.RangeSpecial(bodyPart)]);
             }
         }
 
