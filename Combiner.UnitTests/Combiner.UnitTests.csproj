@@ -56,8 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PartsTests\BackLegstests.cs" />
+    <Compile Include="PartsTests\ClawsTests.cs" />
+    <Compile Include="PartsTests\HeadTests.cs" />
+    <Compile Include="PartsTests\TailTests.cs" />
+    <Compile Include="PartsTests\TorsoTests.cs" />
+    <Compile Include="PartsTests\WingsTests.cs" />
     <Compile Include="StockTests.cs" />
-    <Compile Include="TestExtensions.cs" />
+    <Compile Include="PartsTests\FrontLegsTests.cs" />
+    <Compile Include="TestHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
