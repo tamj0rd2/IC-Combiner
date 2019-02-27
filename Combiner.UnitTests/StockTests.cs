@@ -1,6 +1,5 @@
 ﻿namespace Combiner.UnitTests
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -141,9 +140,10 @@
             frontLegs.MeleeAttack.DamageType.Should().Be(damageType);
         }
 
-        [TestCase("chimpanzee", RangeAttack.RangeDamageType.Normal)]
-        [TestCase("bolas_spider", RangeAttack.RangeDamageType.Normal)]
-        public void HasCorrectFrontLegRangeAttack(string scriptName, RangeAttack.RangeDamageType damageType)
+        [TestCase("chimpanzee", RangeAttack.RangeDamageType.Normal, 3.5, RangeAttack.RangeSpecial.Rock)]
+        [TestCase("bolas_spider", RangeAttack.RangeDamageType.Normal, 5, RangeAttack.RangeSpecial.Normal)]
+        public void HasCorrectFrontLegRangeAttack(
+            string scriptName, RangeAttack.RangeDamageType damageType, double damage, RangeAttack.RangeSpecial special)
         {
             // Arrange
             var attributes = this.GetStockAttributes(scriptName);
@@ -154,6 +154,8 @@
             // Assert
             frontLegs.RangeAttack.Should().NotBeNull();
             frontLegs.RangeAttack.DamageType.Should().Be(damageType);
+            frontLegs.RangeAttack.Damage.Should().Be(damage);
+            frontLegs.RangeAttack.Special.Should().Be(special);
         }
 
         [TestCase("albatross", 16)]
@@ -170,10 +172,10 @@
             wings.AirSpeed.Should().Be(expectedSpeed);
         }
 
-        [TestCase("lobster", true, false, false)]
-        [TestCase("shrimp", true, true, false)]
-        [TestCase(ManOWar, true, false, true)]
-        public void HasCorrectClaws(string scriptName, bool hasMelee, bool hasRange, bool hasPoisonPincers)
+        [TestCase("lobster", true, false)]
+        [TestCase("shrimp", true, true)]
+        [TestCase(ManOWar, true, false)]
+        public void HasCorrectClaws(string scriptName, bool hasMelee, bool hasRange)
         {
             // Arrange
             var attributes = this.GetStockAttributes(scriptName);
@@ -184,19 +186,54 @@
             // Assert
             claws.MeleeAttack.IsNotNull().Should().Be(hasMelee);
             claws.RangeAttack.IsNotNull().Should().Be(hasRange);
+        }
+
+        [TestCase("lobster", false)]
+        [TestCase("shrimp", false)]
+        [TestCase(ManOWar, true)]
+        public void HasCorrectClawsAbilities(string scriptName, bool hasPoisonPincers)
+        {
+            // Arrange
+            var attributes = this.GetStockAttributes(scriptName);
+
+            // Act
+            var claws = new Claws(attributes);
+
+            // Assert
             claws.HasPoisonPincers.Should().Be(hasPoisonPincers);
         }
 
-        [Test]
-        public void HasCorrectClawsMelee()
+        [TestCase("tarantula", MeleeAttack.MeleeDamageType.Normal)]
+        [TestCase(ManOWar, MeleeAttack.MeleeDamageType.PoisonTip)]
+        [TestCase("shrimp", MeleeAttack.MeleeDamageType.BarrierDestroy)]
+        [TestCase("lobster", MeleeAttack.MeleeDamageType.BarrierDestroy)]
+        public void HasCorrectClawsMelee(string scriptName, MeleeAttack.MeleeDamageType damageType)
         {
-            throw new NotImplementedException();
+            // Arrange
+            var attributes = this.GetStockAttributes(scriptName);
+
+            // Act
+            var claws = new Claws(attributes);
+            
+            // Assert
+            claws.MeleeAttack.DamageType.Should().Be(damageType);
         }
 
-        [Test]
-        public void HasCorrectClawsRange()
+        [TestCase("shrimp", RangeAttack.RangeDamageType.Sonic, 2.5, 11.3, RangeAttack.RangeSpecial.Normal)]
+        public void HasCorrectClawsRange(
+            string scriptName, RangeAttack.RangeDamageType damageType, double damage, double max, RangeAttack.RangeSpecial special)
         {
-            throw new NotImplementedException();
+            // Arrange
+            var attributes = this.GetStockAttributes(scriptName);
+
+            // Act
+            var claws = new Claws(attributes);
+
+            // Assert
+            claws.RangeAttack.DamageType.Should().Be(damageType);
+            claws.RangeAttack.Damage.Should().Be(damage);
+            claws.RangeAttack.Max.Should().Be(max);
+            claws.RangeAttack.Special.Should().Be(special);
         }
 
         private IReadOnlyDictionary<string, double> GetStockAttributes(string scriptName)
